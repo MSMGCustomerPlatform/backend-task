@@ -12,6 +12,6 @@ import java.util.Map;
         url = "${blockchain.url}")
 public interface BlockchainFeignClient {
 
-    @RequestMapping(method = RequestMethod.GET, value = "/api")
+    @RequestMapping(method = RequestMethod.GET, value = "/ticker")
     Map<String, BlockchainPriceDto> getCurrencies();
 }

@@ -12,6 +12,6 @@ import java.util.Map;
         url = "${exmo.url}")
 public interface ExmoFeignClient {
 
-    @RequestMapping(method = RequestMethod.POST, value = "/api")
+    @RequestMapping(method = RequestMethod.POST, value = "/ticker")
     Map<String, ExmoPriceDto> getCurrencies();
 }
