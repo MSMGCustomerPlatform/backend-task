@@ -1,11 +1,10 @@
 package com.moneysupermarket.interview.cec.service;
 
-import com.moneysupermarket.interview.cec.model.HighestPriceResponse;
 import com.moneysupermarket.interview.cec.api.blockchain.api.BlockchainFeignClient;
 import com.moneysupermarket.interview.cec.api.blockchain.dto.BlockchainPriceDto;
 import com.moneysupermarket.interview.cec.api.exmo.api.ExmoFeignClient;
 import com.moneysupermarket.interview.cec.api.exmo.dto.ExmoPriceDto;
-import com.moneysupermarket.interview.cec.util.BitcoinExchangeConstants;
+import com.moneysupermarket.interview.cec.model.HighestPriceResponse;
 import org.assertj.core.util.Maps;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -17,8 +16,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.math.BigDecimal;
 import java.util.Map;
 
-import static com.moneysupermarket.interview.cec.util.BitcoinExchangeConstants.BLOCKCHAIN_API_NAME;
-import static com.moneysupermarket.interview.cec.util.BitcoinExchangeConstants.EXMO_API_NAME;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.when;
@@ -44,7 +41,7 @@ public class BitcoinExchangeServiceTest {
         HighestPriceResponse highestPrice = bitcoinExchangeService.getHighestPrice();
 
         assertThat(highestPrice.getPrice()).isEqualTo(BigDecimal.valueOf(12999.99));
-        assertThat(highestPrice.getApiName()).isEqualTo(BLOCKCHAIN_API_NAME);
+        assertThat(highestPrice.getApiName()).isEqualTo("Blockchain");
     }
 
     @Test
@@ -55,7 +52,7 @@ public class BitcoinExchangeServiceTest {
         HighestPriceResponse highestPrice = bitcoinExchangeService.getHighestPrice();
 
         assertThat(highestPrice.getPrice()).isEqualTo(BigDecimal.valueOf(13999.99));
-        assertThat(highestPrice.getApiName()).isEqualTo(EXMO_API_NAME);
+        assertThat(highestPrice.getApiName()).isEqualTo("Exmo");
     }
 
     @Test
