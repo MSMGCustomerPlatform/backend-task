@@ -15,7 +15,7 @@ It finds the exchange with the best (highest) price and returns the price and th
 
 ## Prerequisites
 1.	Download community edition of IntelliJ for [Windows](https://www.jetbrains.com/idea/download/#section=windows) or [MacOs](https://www.jetbrains.com/idea/download/#section=windows) and open the application when the installation has completed.
-2. 	Download the MSM technical test project files [HERE](https://github.com/MSMGCustomerPlatform/backend-task/archive/refs/heads/main.zip.) and save locally.
+2. 	Download the MSM technical test project files [HERE](https://github.com/MSMGCustomerPlatform/backend-task/archive/refs/heads/main.zip) and save locally.
 3. 	Unzip to a folder of your choice.
 4.	Open IntelliJ
 5.	Select File > New > Project from Existing Sources...
